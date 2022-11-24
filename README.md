@@ -1,6 +1,6 @@
 # Portfólio de Data Science
 
-Formado em economia pela Universidade Estadual de Santa Catarina - ESAG/UDESC e Mestre em economia pela Universidade Federal de Santa Catarina - UFSC, desenvolvi alguns projetos em data science, data visualization e data analysis que pode sem observados neste portfólio. 
+Formado em economia pela Universidade Estadual de Santa Catarina - ESAG/UDESC e Mestre em economia pela Universidade Federal de Santa Catarina - UFSC, desenvolvi alguns projetos em data science, data visualization e data analysis que podem ser observados neste portfólio. 
 Os projetos estão divididos em: R e Python (dashbords em BI).
 
 [LINKEDIN](https://www.linkedin.com/in/danielrebhaim/)

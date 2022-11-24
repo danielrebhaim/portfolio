@@ -12,7 +12,7 @@ das contribuições em planos de previdência complementar PGBL. Os modelos VECM
 
 # Projetos em Python e Data Visualization em Power BI
 
-* **Emissão automatizada dos termos de parcelamento via CADAPREV WEB utilizando SELENIUM**: Rotina desenvolvida em Python para automatizar a busca, impressão e encaminhamento de parcelas nas dívidas fundadas entre o município de Florianópolis e o RPPS/SC, utilizando sistema oficial do Ministério da Previdência
+* **[Emissão automatizada dos termos de parcelamento via CADAPREV WEB utilizando SELENIUM](https://github.com/danielrebhaim/portfolio/blob/main/APP%20PARCELAMENTO)**: Rotina desenvolvida em Python para automatizar a busca, impressão e encaminhamento de parcelas nas dívidas fundadas entre o município de Florianópolis e o RPPS/SC, utilizando sistema oficial do Ministério da Previdência
 
 * **[Sistema de controle IPREV](https://app.powerbi.com/view?r=eyJrIjoiZDZiODFjMjgtNTJjNy00NmQ5LWJhODAtOWZmMTQ4MzkyYjk1IiwidCI6IjMzMzc0Y2VkLTI2OTItNDYxOS1hMDQwLTgyY2I2YjE1ZDhkYiJ9&pageName=ReportSection)**: Unificação das informações do IPREV em dashbord publicado no site oficial da institução. A alimentação do sisstema é feita por cada setor responsável, e os dados podem ser segregados em:
 Receitas e despesas Unidade Gestores, análise e estoque de processos por setor e resultado atuarial e financeiro do RPPS.

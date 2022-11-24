@@ -1,0 +1,116 @@
+# IMPORTANDO PACKAGES
+library('gridExtra')
+library(ggplot2)
+library(openxlsx)
+library("tseries")
+library('formattable')
+library('dplyr')
+library("urca")
+library("forecast")
+library("vars")
+library("ts")
+library("tsDyn")
+library("tsDyn")
+library("Tstudio")
+library("mFilter")
+library(dplyr)
+library('rugarch')
+library('fGarch')
+library(seastests)
+library(pracma)
+library(cointReg)
+library(strucchange)
+library(xlsx)
+
+#IMPORTAR EXCEL COM A BASE DE DADOS
+modelo1 = read.xlsx(xlsxFile = "C:/Users/Home/Downloads/modelo3final2.xlsx" , sheet = 9, skipEmptyRows = FALSE)
+
+#TESTE DE RAIZ UNITÁRIA (ADF)
+
+adf.test(modelo1$PGBL)
+adf.test(modelo1$RNDBF)
+adf.test(modelo1$ACP.1)
+adf.test(modelo1$ACP.2)
+adf.test(modelo1$RGPS)
+adf.test(modelo1$RIQUEZA)
+adf.test(modelo1$Juros)
+adf.test(modelo1$Risco)
+adf.test(modelo1$Expectativa.inflação)
+adf.test(modelo1$Reforma_2003)
+adf.test(modelo1$Reforma_2015)
+adf.test(modelo1$Reforma_2019)
+adf.test(modelo1$Taxa.de.desemprego)
+
+#TESTE DE RAIZ UNITÁRIA (KPSS)
+
+kpss.test(modelo1$PGBL)
+kpss.test(modelo1$RNDBF)
+kpss.test(modelo1$ACP.1)
+kpss.test(modelo1$ACP.2)
+kpss.test(modelo1$RGPS)
+kpss.test(modelo1$RIQUEZA)
+kpss.test(modelo1$Juros)
+kpss.test(modelo1$Risco)
+kpss.test(modelo1$Expectativa.inflação)
+kpss.test(modelo1$Reforma_2003)
+kpss.test(modelo1$Reforma_2015)
+kpss.test(modelo1$Reforma_2019)
+kpss.test(modelo1$Taxa.de.desemprego)
+
+#Estacionarizando as séries. Criando um segundo dataframe
+
+modelo2 = c()
+
+modelo2$PGBL <- diff(modelo1$PGBL)
+modelo2$RNDBF <- diff(modelo1$RNDBF)
+modelo2$ACP.1 <- diff(modelo1$ACP.1)
+modelo2$ACP.2 <- diff(modelo1$ACP.2)
+modelo2$RGPS <- diff(modelo1$RGPS)
+modelo2$RIQUEZA <- diff(modelo1$RIQUEZA)
+modelo2$Juros <- diff(modelo1$Juros)
+modelo2$Risco <- diff(modelo1$Risco)
+modelo2$Expectativa.inflação <- diff(modelo1$Expectativa.inflação)
+modelo2$Reforma_2003 <- diff(modelo1$Reforma_2003)
+modelo2$Reforma_2015 <- diff(modelo1$Reforma_2015)
+modelo2$Reforma_2019 <- diff(modelo1$Reforma_2019)
+modelo2$Taxa.de.desemprego <- diff(modelo1$Taxa.de.desemprego)
+
+#Organizando as variáveis
+modelo33 <- cbind(modelo2$PGBL, modelo2$RNDBF, modelo2$Juros, modelo2$RIQUEZA, modelo2$Expectativa.inflação, modelo2$Taxa.de.desemprego, modelo2$ACP.2, modelo2$ACP.1)
+
+#Verificando o número de defasagens
+lagselect <- VARselect(modelo33, lag.max = 5, type = "const", exogen = modeloexogen2)
+lagselect$selection
+lagselect$criteria
+
+#Verificando cointegração
+
+jtest <- ca.jo(modelo, type = "trace", ecdet = "const", K = 9)
+summary(jtest)
+
+#Estimando VECM
+AAA <- VECM(modelo5, 3, r = 5, estim = ("ML"), exogen = modeloexogen)
+summary(AAA)
+
+#Verificando comportamento resíduos
+plot(AAA$residuals)
+
+#Serial Correlation
+
+Serial1 <- serial.test(Model1tovar, lags.pt = 11, type = "PT.asymptotic")
+Serial1
+
+#ARCH Effects
+
+arch1 <- arch.test(Model1tovar, lags.multi = 15, multivariate.only = TRUE)
+arch1
+
+#Norm
+
+norm <- normality.test(Model1tovar, multivariate.only = TRUE)
+norm
+
+
+
+
+

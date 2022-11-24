@@ -1,0 +1,65 @@
+#PACKAGES
+library('gridExtra')
+library(ggplot2)
+library(openxlsx)
+library("tseries")
+library('formattable')
+library('dplyr')
+library("urca")
+library("forecast")
+library("vars")
+library("ts")
+library("tsDyn")
+library("tsDyn")
+library("Tstudio")
+library("mFilter")
+library(dplyr)
+library('rugarch')
+library('fGarch')
+library(seastests)
+library(pracma)
+library(cointReg)
+library(strucchange)
+library("ARDL")
+library(dynamac)
+library(zoo) # for cbind.zoo
+library(xts) # for xts
+library(xlsx)
+
+#IMPORTAR EXCEL
+modelo1 = read.xlsx(xlsxFile = "C:/Users/Home/Downloads/modelo3.xlsx" , sheet = 9, skipEmptyRows = FALSE)
+
+#Transformando em TS
+PGBL <- ts(modelo1$PGBL, start = c(2002,1,1), frequency = 12)
+RNDBF <- ts(modelo1$RNDBF, start = c(2002,1,1), frequency = 12)
+RGPS <- ts(modelo1$RGPS, start = c(2002,1,1), frequency = 12)
+RIQUEZA <- ts(modelo1$RIQUEZA, start = c(2002,1,1), frequency = 12)
+Juros <- ts(modelo1$Juros, start = c(2002,1,1), frequency = 12)
+Risco <- ts(modelo1$Risco, start = c(2002,1,1), frequency = 12)
+Expectativa.inflação <- ts(modelo1$Expectativa.inflação, start = c(2002,1,1), frequency = 12)
+Reforma2003 <- ts(modelo1$Reforma_2003, start = c(2002,1,1), frequency = 12)
+Reforma2015 <- ts(modelo1$Reforma_2015, start = c(2002,1,1), frequency = 12)
+Reforma2019 <- ts(modelo1$Reforma_2019, start = c(2002,1,1), frequency = 12)
+Taxadedesemprego <- ts(modelo1$Taxa.de.desemprego, start = c(2002,1,1), frequency = 12)
+
+#DEFINIR DEFASAGENS
+ordem <- auto_ardl(PGBL~Unid.t+RGPS+RIQUEZA+Juros+Risco+Expectativa.inflação+Reforma_2003+Reforma_2015+Reforma_2019+Taxa.de.desemprego, data = modelo1, max_order = 8)
+ordem$top_orders
+
+#TESTE F BOUNDS
+ecm <- uecm(ardl_model)
+rcm <- recm(ecm, case = 2)
+summary(ecm)
+rcm
+fbounds <- bounds_f_test(ardl_model, case = 3, alpha = 0.01)
+tbound <- bounds_t_test(ecm, case = 3, alpha = 0.01)
+tbound
+fbounds
+
+#RODAR MODELO
+ardl_model <- ardl(PGBL~Unid.t+RGPS+RIQUEZA+Juros+Risco+Expectativa.inflação+Reforma_2003+Reforma_2015+Reforma_2019+Taxa.de.desemprego, data = modelo1, order = c(5,8,6,4,2,1,5,1,5,4,1))
+summary(ardl_model)
+
+#PROVA REAL
+model_ardlfinal <- ordem$best_model
+summary(model_ardlfinal)

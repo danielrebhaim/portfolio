@@ -5,7 +5,7 @@ Os projetos estão divididos em: R e Python (dashbords em BI).
 
 # Projetos em R
 
-* **Os efeitos do regime geral de previdência social sobre as contribuições em planos previdenciários privados do tipo gerador de benefício livre:** O objetivo do trabalho foi verificar os possíveis efeitos do Regime Geral de Previdência Social – RGPS brasileiro sobre a taxa de poupança privada brasileira, utilizando como proxy o volume
+* **[Os efeitos do regime geral de previdência social sobre as contribuições em planos previdenciários privados do tipo gerador de benefício livre](https://github.com/danielrebhaim/portfolio/tree/main/RGPS):** O objetivo do trabalho foi verificar os possíveis efeitos do Regime Geral de Previdência Social – RGPS brasileiro sobre a taxa de poupança privada brasileira, utilizando como proxy o volume
 das contribuições em planos de previdência complementar PGBL. Os modelos VECM, ARDL e NARDL foram utilizados para analisar as possíveis relações entre as variáveis.
 
 * **A GRANULARIDADE DOS GESTORES DEFUNDOS DE INVESTIMENTO NO BRASIL**: Estudo estatístico realizado com os principais gestores brasileiros com o objetivo de verificar a coexistência entre grande e pequenos players no mercado de Fundos de Investimento. A metodologia empírica tem como base o exponencial de Paretto e a Lei de Zipf.

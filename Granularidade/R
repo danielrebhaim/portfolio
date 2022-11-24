@@ -1,0 +1,107 @@
+#PACKAGES
+library('gridExtra')
+library(ggplot2)
+library(openxlsx)
+library("tseries")
+library('formattable')
+library('dplyr')
+library("urca")
+library("forecast")
+library("vars")
+library("ts")
+library("tsDyn")
+library("tsDyn")
+library("Tstudio")
+library("mFilter")
+library(dplyr)
+library('rugarch')
+library('fGarch')
+library(seastests)
+library(pracma)
+library(cointReg)
+library(strucchange)
+library(xlsx)
+
+#IMPORTAR BASE DE DADOS
+modeloa = read.xlsx(xlsxFile = "C:/Users/Home/Downloads/fisica.xlsx" , sheet = 3, skipEmptyRows = FALSE)
+modelob = read.xlsx(xlsxFile = "C:/Users/Home/Downloads/fisica.xlsx" , sheet = 4, skipEmptyRows = FALSE)
+modeloc = read.xlsx(xlsxFile = "C:/Users/Home/Downloads/fisica.xlsx" , sheet = 5, skipEmptyRows = FALSE)
+modelod = read.xlsx(xlsxFile = "C:/Users/Home/Downloads/fisica.xlsx" , sheet = 6, skipEmptyRows = FALSE)
+modeloe = read.xlsx(xlsxFile = "C:/Users/Home/Downloads/fisica.xlsx" , sheet = 7, skipEmptyRows = FALSE)
+modelof = read.xlsx(xlsxFile = "C:/Users/Home/Downloads/fisica.xlsx" , sheet = 8, skipEmptyRows = FALSE)
+modelog = read.xlsx(xlsxFile = "C:/Users/Home/Downloads/fisica.xlsx" , sheet = 9, skipEmptyRows = FALSE)
+modeloh = read.xlsx(xlsxFile = "C:/Users/Home/Downloads/fisica.xlsx" , sheet = 10, skipEmptyRows = FALSE)
+modeloi = read.xlsx(xlsxFile = "C:/Users/Home/Downloads/fisica.xlsx" , sheet = 11, skipEmptyRows = FALSE)
+modeloj = read.xlsx(xlsxFile = "C:/Users/Home/Downloads/fisica.xlsx" , sheet = 12, skipEmptyRows = FALSE)
+
+#SEGREGANDO OS GESTORES EM DIFERENTES CATEGORIAS DE IVNESTIMENTOS
+modeloaa <- slice(modeloa, 1:10)
+
+#APLICANDO A FÓRMULA E LOG
+modeloaa$novo <- modeloaa$Gestor - 1/2
+modeloaa$loga <- log(modeloaa$novo)
+modeloaa$logb <- log(modeloaa$Normatilizado)
+
+#VERIFICANDO MODELO
+modelaa <- lm(modeloaa$loga ~ modeloaa$logb)
+summary(modelaa)
+plot(modeloaa$logb,modeloaa$loga)
+
+#REPLICAR PARA OUTRAS CATEGORIAS DE INVESTIMENTO
+modelobb <- slice(modelob, 1:10)
+modelobb$novo <- modelobb$Gestor - 1/2
+modelobb$loga <- log(modelobb$novo)
+modelobb$logb <- log(modelobb$Normatilizado)
+modelbb <- lm(modelobb$loga ~ modelobb$logb)
+summary(modelbb)
+modelocc <- slice(modeloc, 1:10)
+modelocc$novo <- modelocc$Gestor - 1/2
+modelocc$loga <- log(modelocc$novo)
+modelocc$logb <- log(modelocc$Normatilizado)
+modelcc <- lm(modelocc$loga ~ modelocc$logb)
+summary(modelcc)
+modelodd <- slice(modelod, 1:10)
+modelodd$novo <- modelodd$Gestor - 1/2
+modelodd$loga <- log(modelodd$novo)
+modelodd$logb <- log(modelodd$Normatilizado)
+modeldd <- lm(modelodd$loga ~ modelodd$logb)
+summary(modeldd)
+modeloee <- slice(modeloe, 1:10)
+modeloee$novo <- modeloee$Gestor - 1/2
+modeloee$loga <- log(modeloee$novo)
+modeloee$logb <- log(modeloee$Normatilizado)
+modelee <- lm(modeloee$loga ~ modeloee$logb)
+summary(modelee)
+modeloff <- slice(modelof, 1:10)
+modeloff$novo <- modeloff$Gestor - 1/2
+modeloff$loga <- log(modeloff$novo)
+modeloff$logb <- log(modeloff$Normatilizado)
+modelff <- lm(modeloff$loga ~ modeloff$logb)
+summary(modelff)
+modelogg <- slice(modelog, 1:10)
+modelogg$novo <- modelogg$Gestor - 1/2
+modelogg$loga <- log(modelogg$novo)
+modelogg$logb <- log(modelogg$Normatilizado)
+modelgg <- lm(modelogg$loga ~ modelogg$logb)
+summary(modelgg)
+modelohh <- slice(modeloh, 1:10)
+modelohh$novo <- modelohh$Gestor - 1/2
+modelohh$loga <- log(modelohh$novo)
+modelohh$logb <- log(modelohh$Normatilizado)
+modelhh <- lm(modelohh$loga ~ modelohh$logb)
+summary(modelhh)
+modeloii <- slice(modeloi, 1:10)
+modeloii$novo <- modeloii$Gestor - 1/2
+modeloii$loga <- log(modeloii$novo)
+modeloii$logb <- log(modeloii$Normatilizado)
+modelii <- lm(modeloii$loga ~ modeloii$logb)
+summary(modelii)
+modelojj <- slice(modeloj, 1:10)
+modelojj$novo <- modelojj$Gestor - 1/2
+modelojj$loga <- log(modelojj$novo)
+modelojj$logb <- log(modelojj$Normatilizado)
+
+modeljj <- lm(modelojj$loga ~ modelojj$logb)
+summary(modeljj)
+
+#PLOTANDO AS INFORMAÇÕES

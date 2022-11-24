@@ -3,6 +3,8 @@
 Formado em economia pela Universidade Estadual de Santa Catarina - ESAG/UDESC e Mestre em economia pela Universidade Federal de Santa Catarina - UFSC, desenvolvi alguns projetos em data science, data visualization e data analysis que pode sem observados neste portfólio. 
 Os projetos estão divididos em: R e Python (dashbords em BI).
 
+[LINKEDIN](https://www.linkedin.com/in/danielrebhaim/)
+
 # Projetos em R
 
 * **[Os efeitos do regime geral de previdência social sobre as contribuições em planos previdenciários privados do tipo gerador de benefício livre](https://github.com/danielrebhaim/portfolio/tree/main/RGPS):** O objetivo do trabalho foi verificar os possíveis efeitos do Regime Geral de Previdência Social – RGPS brasileiro sobre a taxa de poupança privada brasileira, utilizando como proxy o volume

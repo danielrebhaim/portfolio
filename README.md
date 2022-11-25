@@ -17,10 +17,10 @@ Economista advisor na elaboração de projetos de viabilidade econômico-finance
 
 # Projetos em Python e Data Visualization em Power BI
 
-* **[Emissão automatizada dos termos de parcelamento via CADAPREV WEB utilizando SELENIUM](https://github.com/danielrebhaim/portfolio/blob/main/APP%20PARCELAMENTO)**: Rotina desenvolvida em Python para automatizar a busca, impressão e encaminhamento de parcelas nas dívidas fundadas entre o município de Florianópolis e o RPPS/SC, utilizando sistema oficial do Ministério da Previdência.
+* **[Emissão automatizada dos termos de parcelamento via CADAPREV WEB utilizando SELENIUM](https://github.com/danielrebhaim/portfolio/blob/main/APP%20PARCELAMENTO)**: Rotina desenvolvida em Python para automatizar a busca, impressão e encaminhamento de parcelas nas dívidas fundadas entre os município e o RPPS, utilizando sistema oficial do Ministério da Previdência.
 
-* **[Sistema de controle IPREV](https://app.powerbi.com/view?r=eyJrIjoiZDZiODFjMjgtNTJjNy00NmQ5LWJhODAtOWZmMTQ4MzkyYjk1IiwidCI6IjMzMzc0Y2VkLTI2OTItNDYxOS1hMDQwLTgyY2I2YjE1ZDhkYiJ9&pageName=ReportSection)**: Unificação das informações do IPREV em dashbord publicado no site oficial da institução. 
+* **[Sistema de controle RPPS](https://app.powerbi.com/view?r=eyJrIjoiZDZiODFjMjgtNTJjNy00NmQ5LWJhODAtOWZmMTQ4MzkyYjk1IiwidCI6IjMzMzc0Y2VkLTI2OTItNDYxOS1hMDQwLTgyY2I2YjE1ZDhkYiJ9&pageName=ReportSection)**: Unificação das informações da Instituição em dashbord publicado no site oficial da institução. 
 
-* **[Dados Atuariais](https://app.powerbi.com/view?r=eyJrIjoiZWNlZTdmZjYtYTA5MS00ZmQ5LTljOGQtYjk5ZTdhY2MyMzA5IiwidCI6IjMzMzc0Y2VkLTI2OTItNDYxOS1hMDQwLTgyY2I2YjE1ZDhkYiJ9&pageName=ReportSection)**: Data cleaning e organização da base de dados dos 107 mil beneficiários do RPPS, massa civil. A base de dados contém as seguintes informações: salário, sexo, CPF, nome, órgãod e origem, cargo e data início no setor público. 
+* **[Dados Atuariais](https://app.powerbi.com/view?r=eyJrIjoiZWNlZTdmZjYtYTA5MS00ZmQ5LTljOGQtYjk5ZTdhY2MyMzA5IiwidCI6IjMzMzc0Y2VkLTI2OTItNDYxOS1hMDQwLTgyY2I2YjE1ZDhkYiJ9&pageName=ReportSection)**: Data cleaning e organização da base de dados dos 107 mil beneficiários do RPPS/SC, massa civil. A base de dados contém as seguintes informações: salário, sexo, CPF, nome, órgão de origem, cargo e data início no setor público. 
 
 * **[Matriz de Risco IPREV](https://app.powerbi.com/view?r=eyJrIjoiZGE1N2FiNTYtZDdmMi00NWM4LTk4YTctMWNlN2I1MDMxNzkyIiwidCI6IjMzMzc0Y2VkLTI2OTItNDYxOS1hMDQwLTgyY2I2YjE1ZDhkYiJ9&pageName=ReportSection)**: Elaboração de score de risco e categorização das principais fraquezas e ameaças que o IPREV possui. Dashbord interativo com os principais gargalos e pontos críticos do RPPS/SC.

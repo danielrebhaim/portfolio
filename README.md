@@ -13,7 +13,7 @@ Economista advisor na elaboração de projetos de viabilidade econômico-finance
 
 * **[Os efeitos do regime geral de previdência social sobre as contribuições em planos previdenciários privados do tipo gerador de benefício livre](https://github.com/danielrebhaim/portfolio/tree/main/RGPS):** Utilização dos modelos VECM, ARDL e NARDL em pesquisa para identificar: Os efeitos do regime geral de previdência social sobre as contribuições em planos previdenciários privados do tipo gerador de benefício livre.
 
-* **[A GRANULARIDADE DOS GESTORES DEFUNDOS DE INVESTIMENTO NO BRASIL](https://github.com/danielrebhaim/portfolio/tree/main/Granularidade)**: Estudo estatístico realizado com os principais gestores brasileiros com o objetivo de verificar a coexistência entre grande e pequenos players no mercado de Fundos de Investimento. A metodologia empírica tem como base o exponencial de Paretto e a Lei de Zipf.
+* **[A GRANULARIDADE DOS GESTORES DE FUNDOS DE INVESTIMENTO NO BRASIL](https://github.com/danielrebhaim/portfolio/tree/main/Granularidade)**: Estudo estatístico realizado com os principais gestores brasileiros com o objetivo de verificar a coexistência entre grande e pequenos players no mercado de Fundos de Investimento. A metodologia empírica tem como base o exponencial de Paretto e a Lei de Zipf.
 
 # Projetos em Python e Data Visualization em Power BI
 

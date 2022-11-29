@@ -1,6 +1,6 @@
 # Portfólio de Data Science
 
-Formado em economia pela Universidade Estadual de Santa Catarina - ESAG/UDESC e Mestre em economia pela Universidade Federal de Santa Catarina - UFSC, desenvolvedor em data science, data visualization e data analysis, em: R e Python (dashbords em BI).
+Formado em economia pela Universidade Estadual de Santa Catarina - ESAG/UDESC e Mestre em economia pela Universidade Federal de Santa Catarina - UFSC, conhecimento em data science, data visualization e data analysis, em: R e Python (dashbords em BI).
 
 Experiência em Regimes Próprio de Previdência Social, exercendo atividades na área de investimentos dos recursos e monitoramento do enquadramento e rentabilidade. Desenvolvimento de ferramentas automatizadas de busca e lançamento de dados e controle das operações e de produção. Liderança de equipe na implementação e monitoramento de Planejamento Estratégico.
 
